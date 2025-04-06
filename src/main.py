@@ -42,18 +42,16 @@ def main():
 
     current_player = 1
     while True:
-        clear_console()
+        # clear_console()
         board.print_board()
 
         if board.check_connection(1):
-            print("¡El jugador 1 (🔴) ha ganado!")
+            print("Ha ganado el jugador 1 (🔴)")
             break
+        
         if board.check_connection(2):
-            print("¡El jugador 2 (🔵) ha ganado!")
-            break
-        if not board.get_possible_moves():
-            print("Empate. No hay más movimientos disponibles.")
-            break
+            print("Ha ganado el jugador 2 (🔵)")
+            break            
 
         print(f"\n \n Turno del jugador {current_player} ({'🔴' if current_player==1 else '🔵'}).")
 

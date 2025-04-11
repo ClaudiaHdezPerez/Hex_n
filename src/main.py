@@ -1,7 +1,6 @@
 import os
 from hex_board import HexBoard
-from player import IAPlayer
-
+from player import IAPlayer, check_connection
 
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -45,11 +44,11 @@ def main():
         # clear_console()
         board.print_board()
 
-        if board.check_connection(1):
+        if check_connection(board, 1):
             print("Ha ganado el jugador 1 (🔴)")
             break
         
-        if board.check_connection(2):
+        if check_connection(board, 2):
             print("Ha ganado el jugador 2 (🔵)")
             break            
 

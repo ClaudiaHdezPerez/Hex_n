@@ -1,4 +1,6 @@
 import random
+# NOTA: por tener tipados los parámetros del método play tengo que importar la clase HexBoard
+# !!!!
 from hex_board import HexBoard
 import heapq
 import math
